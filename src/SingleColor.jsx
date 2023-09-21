@@ -9,7 +9,7 @@ const SingleColor = (props) => {
         await navigator.clipboard.writeText(`#${hex}`);
         toast.success("Successfully copied to clipboard");
       } catch (error) {
-        toast.error("Failed to copy");
+        toast.error("Failed to copy to clipboard");
       }
     } else {
       toast.error("Can't access clipboard");
