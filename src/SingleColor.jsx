@@ -1,7 +1,8 @@
 import { toast } from "react-toastify";
 
 const SingleColor = (props) => {
-  const { hex, weight } = props.color;
+  console.log(props.color);
+  const { hex, weight, type } = props.color;
   const clickHandler = async () => {
     if (navigator.clipboard) {
       try {
@@ -22,6 +23,7 @@ const SingleColor = (props) => {
     >
       <p className="percent-value">{weight}%</p>
       <p className="color-value">#{hex}</p>
+      <p className="color-value">{type}</p>
     </article>
   );
 };
